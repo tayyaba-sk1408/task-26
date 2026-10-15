@@ -1,0 +1,264 @@
+```css
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+    --bg: #0b1020;
+    --card: #131b31;
+    --text: #f4f7ff;
+    --muted: #9ca9c4;
+    --line: #2b3653;
+    --accent: #8b7cff;
+    --mint: #40d9c2;
+    --danger: #ff7188;
+    --success: #46dfb5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 15% 15%, rgba(107,92,255,.22), transparent 30%),
+        radial-gradient(circle at 90% 85%, rgba(42,209,184,.13), transparent 28%),
+        var(--bg);
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 16px;
+}
+
+.card {
+    width: min(100%, 460px);
+    padding: 36px;
+    border: 1px solid #ffffff24;
+    border-radius: 24px;
+    background: rgba(19,27,49,.94);
+    box-shadow: 0 28px 90px #0006;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    color: #10152a;
+    font: 800 24px Manrope, sans-serif;
+    background: linear-gradient(135deg, var(--mint), var(--accent));
+}
+
+.eyebrow {
+    margin: 24px 0 8px;
+    color: var(--mint);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 0;
+    font: 800 clamp(25px, 5vw, 31px) Manrope, sans-serif;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    margin: 10px 0 28px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.field {
+    margin-bottom: 17px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    outline: none;
+    color: var(--text);
+    background: #10182c;
+    font: 14px 'DM Sans', sans-serif;
+    transition: .2s;
+}
+
+input::placeholder {
+    color: #65728f;
+}
+
+input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px #8b7cff24;
+}
+
+input.invalid {
+    border-color: var(--danger);
+}
+
+.label-row,
+.strength-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.hint,
+.strength-row small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.password-wrap {
+    position: relative;
+}
+
+.password-wrap input {
+    padding-right: 65px;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    color: var(--mint);
+    background: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.strength-track {
+    height: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 99px;
+    background: #26314a;
+}
+
+.strength-track span {
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: 99px;
+    transition: width .25s, background .25s;
+}
+
+.strength-row {
+    margin-top: 7px;
+}
+
+.error {
+    display: block;
+    min-height: 15px;
+    margin-top: 5px;
+    color: var(--danger);
+    font-size: 11px;
+}
+
+.terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.terms input {
+    margin-top: 3px;
+    accent-color: var(--accent);
+}
+
+a {
+    color: var(--mint);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 12px;
+    color: #0c1324;
+    background: linear-gradient(100deg, var(--mint), #a4a0ff);
+    cursor: pointer;
+    font: 800 14px 'DM Sans', sans-serif;
+    transition: transform .2s, filter .2s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+}
+
+.success {
+    min-height: 18px;
+    margin: 12px 0 0;
+    color: var(--success);
+    text-align: center;
+    font-size: 13px;
+}
+
+.footer {
+    margin: 23px 0 0;
+    color: var(--muted);
+    text-align: center;
+    font-size: 12px;
+}
+
+.note {
+    margin: 17px 0 0;
+    color: #687594;
+    font-size: 11px;
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 20px 12px;
+    }
+
+    .card {
+        padding: 27px 21px;
+        border-radius: 20px;
+    }
+
+    .subtitle {
+        margin-bottom: 22px;
+    }
+}
+```

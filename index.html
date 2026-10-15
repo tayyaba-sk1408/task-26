@@ -1,0 +1,68 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Nova</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <section class="card">
+            <div class="logo">N</div>
+            <p class="eyebrow">JOIN THE COMMUNITY</p>
+            <h1>Create your account</h1>
+            <p class="subtitle">Start your journey with a few simple details.</p>
+
+            <form id="signupForm" novalidate>
+                <div class="field">
+                    <label for="name">Full name</label>
+                    <input id="name" type="text" placeholder="e.g. Ayesha Khan" autocomplete="name">
+                    <small class="error" id="nameError"></small>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email address</label>
+                    <input id="email" type="email" placeholder="you@example.com" autocomplete="email">
+                    <small class="error" id="emailError"></small>
+                </div>
+
+                <div class="field">
+                    <div class="label-row">
+                        <label for="password">Password</label>
+                        <span class="hint">Minimum 8 characters</span>
+                    </div>
+                    <div class="password-wrap">
+                        <input id="password" type="password" placeholder="Create a strong password" autocomplete="new-password">
+                        <button type="button" id="togglePassword">Show</button>
+                    </div>
+                    <div class="strength-track">
+                        <span id="strengthBar"></span>
+                    </div>
+                    <div class="strength-row">
+                        <small id="strengthText">Password strength</small>
+                        <small class="error" id="passwordError"></small>
+                    </div>
+                </div>
+
+                <label class="terms">
+                    <input type="checkbox" id="terms">
+                    <span>I agree to the <a href="#" id="termsLink">Terms of Service</a> and Privacy Policy.</span>
+                </label>
+                <small class="error" id="termsError"></small>
+
+                <button class="submit-btn" type="submit">Create account <span>→</span></button>
+                <p class="success" id="successMessage" role="status"></p>
+            </form>
+
+            <p class="footer">Already have an account? <a href="#">Sign in</a></p>
+        </section>
+
+        <p class="note">Secure Signup Form · Day 26 Internship Task</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
